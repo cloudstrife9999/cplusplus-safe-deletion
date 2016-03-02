@@ -22,6 +22,9 @@ int safe_remove_from_disk(string path) {
 		fwrite(content, sizeof(byte), size, f);
 		free(content);
 		fclose(f);
+
+		//paranoid level = insane
+		size = 0;
 	}
 
 	//now we can delete the file.
